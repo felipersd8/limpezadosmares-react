@@ -1,16 +1,18 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { MapPin, Calendar, Anchor } from 'lucide-react';
+import posts from '../data/posts.json';
 
 const Etapas = ({ data = [] }) => {
-  // If no data yet, use placeholders that match the User's "Etapa" concept
-  const defaultEtapas = [
-    { title: "21ª Etapa - Canasvieiras", date: "Março 2026", location: "Trapiche de Canasvieiras", img: "/nova_etapa/WhatsApp Image 2026-03-08 at 18.15.12.jpeg" },
-    { title: "20ª Etapa - Balneário Camboriú", date: "Março 2024", location: "Ilha do Siri", img: "/images/hero-scuba.png" },
-    { title: "19ª Etapa - Florianópolis", date: "Dezembro 2023", location: "Praia do Forte", img: "/images/logo-white.png" },
-  ];
-
-  const displayData = data.length > 0 ? data : defaultEtapas;
+  // Use posts from JSON as source of truth, but allow override via prop
+  const displayData = data.length > 0 ? data : posts.slice(0, 3).map(p => ({
+    title: p.title.replace(/\n/g, ' '),
+    date: p.date,
+    location: p.title.split('\n')[1]?.trim() || "Florianópolis",
+    img: p.images?.[0] || p.image || "",
+    slug: p.slug || p.id
+  }));
 
   return (
     <section id="etapas" className="py-32 relative overflow-hidden">
@@ -35,36 +37,42 @@ const Etapas = ({ data = [] }) => {
               transition={{ delay: idx * 0.1, duration: 0.8 }}
               className="group relative"
             >
-              <div className="glass-card overflow-hidden h-full flex flex-col">
-                {/* Image Placeholder/Real */}
-                <div className="relative h-64 overflow-hidden">
-                  {etapa.img ? (
-                    <img 
-                      src={etapa.img} 
-                      alt={etapa.title} 
-                      className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                    />
-                  ) : (
-                    <div className="w-full h-full bg-slate-900 flex items-center justify-center text-primary/20">
-                      <Anchor size={64} />
-                    </div>
-                  )}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent opacity-60" />
-                </div>
-
-                <div className="p-8 flex-grow flex flex-col">
-                  <div className="flex items-center gap-4 mb-4 text-[10px] font-bold tracking-widest text-primary uppercase">
-                    <span className="flex items-center gap-1"><Calendar size={12} /> {etapa.date}</span>
-                    <span className="flex items-center gap-1"><MapPin size={12} /> {etapa.location}</span>
+              <Link to={`/noticia/${etapa.slug}`} className="block h-full">
+                <div className="glass-card overflow-hidden h-full flex flex-col cursor-pointer">
+                  {/* Image Placeholder/Real */}
+                  <div className="relative h-64 overflow-hidden">
+                    {etapa.img ? (
+                      <img 
+                        src={etapa.img} 
+                        alt={etapa.title} 
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        onError={(e) => {
+                          e.target.onerror = null;
+                          e.target.src = 'https://via.placeholder.com/800x600?text=Etapa';
+                        }}
+                      />
+                    ) : (
+                      <div className="w-full h-full bg-slate-900 flex items-center justify-center text-primary/20">
+                        <Anchor size={64} />
+                      </div>
+                    )}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#020617] to-transparent opacity-60" />
                   </div>
-                  <h3 className="text-xl font-bold mb-6 group-hover:text-primary transition-colors">
-                    {etapa.title}
-                  </h3>
-                  <button className="mt-auto text-[10px] font-black tracking-[0.3em] uppercase text-white/40 group-hover:text-white transition-colors flex items-center gap-2">
-                    Ver detalhes —
-                  </button>
+
+                  <div className="p-8 flex-grow flex flex-col">
+                    <div className="flex items-center gap-4 mb-4 text-[10px] font-bold tracking-widest text-primary uppercase">
+                      <span className="flex items-center gap-1"><Calendar size={12} /> {etapa.date}</span>
+                      <span className="flex items-center gap-1"><MapPin size={12} /> {etapa.location}</span>
+                    </div>
+                    <h3 className="text-xl font-bold mb-6 group-hover:text-primary transition-colors line-clamp-2">
+                      {etapa.title}
+                    </h3>
+                    <div className="mt-auto text-[10px] font-black tracking-[0.3em] uppercase text-white/40 group-hover:text-white transition-colors flex items-center gap-2">
+                      Ver detalhes —
+                    </div>
+                  </div>
                 </div>
-              </div>
+              </Link>
             </motion.div>
           ))}
         </div>
