@@ -6,13 +6,16 @@ import posts from '../data/posts.json';
 
 const Etapas = ({ data = [] }) => {
   // Use posts from JSON as source of truth, but allow override via prop
-  const displayData = data.length > 0 ? data : posts.slice(0, 3).map(p => ({
-    title: p.title.replace(/\n/g, ' '),
-    date: p.date,
-    location: p.title.split('\n')[1]?.trim() || "Florianópolis",
-    img: p.images?.[0] || p.image || "",
-    slug: p.slug || p.id
-  }));
+  const displayData = data.length > 0 ? data : posts.slice(0, 3).map(p => {
+    const titleLines = p.title.split('\n');
+    return {
+      title: titleLines[0].trim(),
+      date: p.date,
+      location: titleLines[1]?.trim() || "Florianópolis",
+      img: p.images?.[0] || p.image || "",
+      slug: p.slug || p.id
+    };
+  });
 
   return (
     <section id="etapas" className="py-32 relative overflow-hidden">

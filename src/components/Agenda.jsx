@@ -21,18 +21,20 @@ const Agenda = () => {
             
             <h2 className="text-4xl md:text-7xl font-bold mb-8 text-white leading-tight" style={{ fontFamily: 'Syncopate, sans-serif' }}>
               Vem aí: <br/>
-              <span className="text-primary drop-shadow-[0_0_30px_rgba(16,185,129,0.4)]">15/03</span>
+              <span className="text-primary drop-shadow-[0_0_30px_rgba(16,185,129,0.4)]">21/03</span>
             </h2>
             
             <p className="text-xl text-text-muted mb-10 leading-relaxed font-light max-w-xl">
-              Próxima Etapa: <span className="text-white font-bold">Canasvieiras</span>.<br/> 
-              Saída do Trapiche de Canasvieiras. Acompanhe a agenda do Limpeza dos Mares! 
-              A próxima etapa será inesquecível.
+              Próxima Etapa: <span className="text-white font-bold">Praia do Tinguá</span>.<br/> 
+              Governador Celso Ramos. Ação especial em alusão ao Dia Mundial da Água! 
+              A saída do barco é em Canasvieiras.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
               <motion.a 
-                href="https://limpezadosmares.com/inscricao" 
+                href="https://limpezadosmares.com" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-2026 shadow-glow inline-flex items-center justify-center gap-3"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
@@ -42,7 +44,7 @@ const Agenda = () => {
               </motion.a>
 
               <motion.a 
-                href="https://wa.me/554891475761?text=Olá, gostaria de me inscrever para a etapa embarcada/mergulho em Canasvieiras." 
+                href="https://wa.me/5548999330062?text=Olá, gostaria de me inscrever para a etapa embarcada/mergulho no Tinguá." 
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn-2026 !bg-primary !text-white shadow-glow inline-flex items-center justify-center gap-3"
