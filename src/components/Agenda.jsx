@@ -77,22 +77,42 @@ const Agenda = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             
-            <div className="relative z-10 w-full">
-              <h3 className="text-sm font-bold text-center mb-6 tracking-[0.2em] text-white uppercase drop-shadow-md">Patrocínio Mantenedor</h3>
-              <div className="bg-white/95 backdrop-blur-sm p-8 rounded-3xl flex justify-center shadow-2xl hover:bg-white transition-colors duration-300 border border-white/20">
-                <img 
-                  src="/images/logofort.png" 
-                  alt="Fort Atacadista" 
-                  className="max-h-[80px] object-contain hover:scale-105 transition-transform duration-500" 
-                />
+            <div className="space-y-12">
+              {/* Patrocínio Mantenedor */}
+              <div className="flex flex-col items-center">
+                <h3 className="text-white/70 text-sm font-bold tracking-[0.2em] mb-8 pb-2 border-b border-white/10">
+                  PATROCÍNIO MANTENEDOR
+                </h3>
+                <div className="bg-white p-6 rounded-2xl shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 w-full max-w-[280px] group">
+                  <img 
+                    src="/uploads/2025/07/logofort.png" 
+                    alt="Fort Atacadista" 
+                    className="w-full h-auto object-contain filter group-hover:scale-105 transition-transform duration-500"
+                  />
+                </div>
               </div>
-            </div>
-            
-            <div className="relative z-10 w-full pt-10 border-t border-white/20">
-              <h3 className="text-sm font-bold text-center mb-6 tracking-[0.2em] text-white uppercase drop-shadow-md">Apoio Oficial</h3>
-              <div className="flex justify-center gap-10 items-center flex-wrap bg-white/95 backdrop-blur-sm p-6 rounded-3xl shadow-xl hover:bg-white transition-colors duration-300 border border-white/20">
-                <img src="/images/navitec.jpeg" alt="Navitec" className="max-h-[50px] object-contain mix-blend-multiply hover:scale-110 transition-transform duration-300" />
-                <img src="/images/sitelimpezadosmares.jpg" alt="Apoiador Limpeza" className="max-h-[50px] object-contain mix-blend-multiply hover:scale-110 transition-transform duration-300" />
+
+              {/* Apoio Oficial */}
+              <div className="flex flex-col items-center">
+                <h3 className="text-white/70 text-sm font-bold tracking-[0.2em] mb-8 pb-2 border-b border-white/10">
+                  APOIO OFICIAL
+                </h3>
+                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-4xl px-4">
+                  {[
+                    { src: "/uploads/2025/04/LogoSanautica-1-pdf.jpg", alt: "Sanáutica" },
+                    { src: "/uploads/2025/07/Marina-Atlantida-Logotipo.png", alt: "Marina Atlântida" },
+                    { src: "/uploads/2025/04/LOGO_MARINA_BLUE_FOX_HORIZ_FUNDO_BRANCO.png", alt: "Marina Blue Fox" },
+                    { src: "/uploads/2025/04/navitec.jpeg", alt: "Navitec" }
+                  ].map((logo, index) => (
+                    <div key={index} className="bg-white p-4 rounded-xl shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 flex items-center justify-center group">
+                      <img 
+                        src={logo.src} 
+                        alt={logo.alt} 
+                        className="max-h-20 w-auto object-contain filter group-hover:scale-110 transition-transform duration-500"
+                      />
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </motion.div>
