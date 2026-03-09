@@ -5,9 +5,9 @@ import { MapPin, Calendar, Anchor } from 'lucide-react';
 const Etapas = ({ data = [] }) => {
   // If no data yet, use placeholders that match the User's "Etapa" concept
   const defaultEtapas = [
+    { title: "21ª Etapa - Canasvieiras", date: "Março 2026", location: "Trapiche de Canasvieiras", img: "/nova_etapa/WhatsApp Image 2026-03-08 at 18.15.12.jpeg" },
     { title: "20ª Etapa - Balneário Camboriú", date: "Março 2024", location: "Ilha do Siri", img: "/images/hero-scuba.png" },
     { title: "19ª Etapa - Florianópolis", date: "Dezembro 2023", location: "Praia do Forte", img: "/images/logo-white.png" },
-    { title: "18ª Etapa - Itapema", date: "Setembro 2023", location: "Canto da Praia", img: "" },
   ];
 
   const displayData = data.length > 0 ? data : defaultEtapas;
