@@ -45,7 +45,7 @@ const Hero = () => {
             <span className="text-primary font-bold tracking-[0.4em] uppercase text-sm mb-8 block drop-shadow-lg">
               Projeto Limpeza dos Mares 
             </span>
-            <h1 className="text-6xl md:text-8xl lg:text-[7rem] font-bold mb-8 leading-[0.9] tracking-tighter text-white drop-shadow-2xl" style={{ fontFamily: 'Syncopate, sans-serif' }}>
+            <h1 className="text-[2.5rem] sm:text-6xl md:text-8xl lg:text-[7rem] font-bold mb-8 leading-[0.9] tracking-tighter text-white drop-shadow-2xl" style={{ fontFamily: 'Syncopate, sans-serif' }}>
               UM OCEANO <br />
               <span className="text-reveal inline-block mt-4">DESLUMBRANTE</span> <br />
               COMEÇA AQUI

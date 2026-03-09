@@ -19,7 +19,7 @@ const Agenda = () => {
               <span className="font-bold tracking-widest text-xs uppercase">Próxima Etapa</span>
             </div>
             
-            <h2 className="text-5xl md:text-7xl font-bold mb-8 text-white leading-tight" style={{ fontFamily: 'Syncopate, sans-serif' }}>
+            <h2 className="text-4xl md:text-7xl font-bold mb-8 text-white leading-tight" style={{ fontFamily: 'Syncopate, sans-serif' }}>
               Vem aí: <br/>
               <span className="text-primary drop-shadow-[0_0_30px_rgba(16,185,129,0.4)]">15/03</span>
             </h2>

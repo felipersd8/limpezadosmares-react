@@ -44,7 +44,7 @@ const Stats = () => {
             <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] mb-4 block">
               Resultados Mensuráveis
             </span>
-            <h2 className="text-4xl md:text-7xl font-black">
+            <h2 className="text-3xl md:text-7xl font-black">
               NOSSO <span className="text-reveal">IMPACTO</span>
             </h2>
           </div>
@@ -59,7 +59,7 @@ const Stats = () => {
                 transition={{ delay: idx * 0.1, duration: 0.8 }}
                 className="text-center"
               >
-                <div className="text-5xl md:text-7xl font-black text-white mb-4 tracking-tighter">
+                <div className="text-4xl md:text-7xl font-black text-white mb-4 tracking-tighter">
                   <AnimatedCounter from={0} to={stat.value} suffix={stat.suffix} />
                 </div>
                 <div className="text-primary font-bold text-xs uppercase tracking-[0.2em] mb-2">

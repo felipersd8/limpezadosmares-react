@@ -178,6 +178,10 @@ h1, h2, h3 {
   .container-mega { padding: 0 2rem; }
 }
 
+@media (max-width: 640px) {
+  .container-mega { padding: 0 1.25rem; }
+}
+
 /* Scroll Animations */
 .reveal {
   opacity: 0;
