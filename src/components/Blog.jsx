@@ -12,7 +12,7 @@ const Blog = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="text-center mb-24 relative">
           <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 block">Ocean Recovery 2026</span>
-          <h2 className="text-5xl md:text-7xl font-bold mb-6 gradient-text" style={{ fontFamily: 'Syncopate, sans-serif' }}>
+          <h2 className="text-[clamp(1.8rem,7vw,3rem)] md:text-7xl font-bold mb-6 gradient-text" style={{ fontFamily: 'Syncopate, sans-serif' }}>
             Etapas do Projeto
           </h2>
           <p className="text-text-muted max-w-2xl mx-auto text-lg leading-relaxed">

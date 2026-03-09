@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Send, User, Mail, Phone, MapPin, Anchor, CheckCircle2 } from 'lucide-react';
+import { Send, User, Mail, Phone, MapPin, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
+import { supabase } from '../lib/supabase';
 
 const Inscricao = () => {
-  const [submitted, setSubmitted] = useState(false);
+  const [status, setStatus] = useState('idle'); // idle | loading | success | error
+  const [errorMsg, setErrorMsg] = useState('');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -12,11 +14,27 @@ const Inscricao = () => {
     category: 'voluntario'
   });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Simulate form submission
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
+    setStatus('loading');
+    setErrorMsg('');
+
+    const { error } = await supabase.from('inscricoes').insert({
+      nome:      formData.name,
+      email:     formData.email,
+      whatsapp:  formData.whatsapp,
+      cidade:    formData.city,
+      categoria: formData.category,
+      etapa:     'Etapa Tinguá',
+    });
+
+    if (error) {
+      console.error('Erro ao salvar inscrição:', error.message);
+      setErrorMsg('Ocorreu um erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.');
+      setStatus('error');
+    } else {
+      setStatus('success');
+    }
   };
 
   const handleChange = (e) => {
@@ -24,10 +42,10 @@ const Inscricao = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  if (submitted) {
+  if (status === 'success') {
     return (
       <div className="min-h-[80vh] flex items-center justify-center container-mega pt-32">
-        <motion.div 
+        <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           className="glass-2026 p-12 text-center max-w-2xl w-full"
@@ -39,12 +57,16 @@ const Inscricao = () => {
           </div>
           <h2 className="text-3xl md:text-5xl font-black mb-6">Inscrição Recebida!</h2>
           <p className="text-xl text-text-muted mb-8 leading-relaxed">
-            Obrigado, <span className="text-white font-bold">{formData.name}</span>! Sua pré-inscrição para a etapa de <span className="text-primary font-bold">Governador Celso Ramos</span> foi realizada com sucesso. 
+            Obrigado, <span className="text-white font-bold">{formData.name}</span>! Sua pré-inscrição para a{' '}
+            <span className="text-primary font-bold">Etapa Tinguá</span> foi realizada com sucesso.{' '}
             Em breve entraremos em contato via WhatsApp para confirmar os detalhes.
           </p>
-          <button 
-            onClick={() => setSubmitted(false)}
-            className="btn-2026 !bg-primary !text-white"
+          <button
+            onClick={() => {
+              setStatus('idle');
+              setFormData({ name: '', email: '', whatsapp: '', city: '', category: 'voluntario' });
+            }}
+            className="btn-2026"
           >
             Fazer outra inscrição
           </button>
@@ -70,7 +92,7 @@ const Inscricao = () => {
             <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] mb-4 block">
               Participe da Mudança
             </span>
-            <h1 className="text-4xl md:text-7xl font-black mb-6">
+            <h1 className="text-[clamp(1.5rem,7vw,4rem)] md:text-7xl font-black mb-6">
               INSCRIÇÃO <br />
               <span className="text-reveal">ETAPA TINGUÁ</span>
             </h1>
@@ -85,15 +107,22 @@ const Inscricao = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="glass-2026 p-8 md:p-16 relative overflow-hidden"
           >
+            {status === 'error' && (
+              <div className="mb-8 flex items-start gap-3 bg-red-500/10 border border-red-500/30 rounded-2xl p-4 text-red-400">
+                <AlertCircle size={20} className="shrink-0 mt-0.5" />
+                <p className="text-sm">{errorMsg}</p>
+              </div>
+            )}
+
             <form onSubmit={handleSubmit} className="grid md:grid-cols-2 gap-8">
               {/* Name */}
               <div className="space-y-2">
                 <label className="text-[10px] font-black tracking-widest uppercase text-text-muted ml-2">Nome Completo</label>
                 <div className="relative group">
                   <User className="absolute left-4 top-1/2 -translate-y-1/2 text-primary/40 group-focus-within:text-primary transition-colors" size={18} />
-                  <input 
+                  <input
                     required
-                    type="text" 
+                    type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
@@ -108,9 +137,9 @@ const Inscricao = () => {
                 <label className="text-[10px] font-black tracking-widest uppercase text-text-muted ml-2">E-mail</label>
                 <div className="relative group">
                   <Mail className="absolute left-4 top-1/2 -translate-y-1/2 text-primary/40 group-focus-within:text-primary transition-colors" size={18} />
-                  <input 
+                  <input
                     required
-                    type="email" 
+                    type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
@@ -125,9 +154,9 @@ const Inscricao = () => {
                 <label className="text-[10px] font-black tracking-widest uppercase text-text-muted ml-2">WhatsApp</label>
                 <div className="relative group">
                   <Phone className="absolute left-4 top-1/2 -translate-y-1/2 text-primary/40 group-focus-within:text-primary transition-colors" size={18} />
-                  <input 
+                  <input
                     required
-                    type="tel" 
+                    type="tel"
                     name="whatsapp"
                     value={formData.whatsapp}
                     onChange={handleChange}
@@ -142,9 +171,9 @@ const Inscricao = () => {
                 <label className="text-[10px] font-black tracking-widest uppercase text-text-muted ml-2">Cidade</label>
                 <div className="relative group">
                   <MapPin className="absolute left-4 top-1/2 -translate-y-1/2 text-primary/40 group-focus-within:text-primary transition-colors" size={18} />
-                  <input 
+                  <input
                     required
-                    type="text" 
+                    type="text"
                     name="city"
                     value={formData.city}
                     onChange={handleChange}
@@ -164,17 +193,17 @@ const Inscricao = () => {
                     { id: 'estrela', label: 'Estrela do Mar' },
                   ].map((cat) => (
                     <label key={cat.id} className="cursor-pointer group">
-                      <input 
-                        type="radio" 
-                        name="category" 
+                      <input
+                        type="radio"
+                        name="category"
                         value={cat.id}
                         checked={formData.category === cat.id}
                         onChange={handleChange}
                         className="hidden"
                       />
                       <div className={`p-4 rounded-2xl border transition-all h-full text-center flex flex-col items-center justify-center gap-2 ${
-                        formData.category === cat.id 
-                          ? 'bg-primary/20 border-primary text-white shadow-[0_0_20px_rgba(16,185,129,0.2)]' 
+                        formData.category === cat.id
+                          ? 'bg-primary/20 border-primary text-white shadow-[0_0_20px_rgba(16,185,129,0.2)]'
                           : 'bg-white/5 border-white/10 text-text-muted group-hover:bg-white/10'
                       }`}>
                         <span className="capitalize font-bold text-[10px] tracking-wider leading-tight">{cat.label}</span>
@@ -188,8 +217,21 @@ const Inscricao = () => {
               </div>
 
               <div className="md:col-span-2 pt-6">
-                <button type="submit" className="btn-2026 !w-full !py-5 shadow-glow flex justify-center gap-3">
-                  Confirmar Inscrição <Send size={18} />
+                <button
+                  type="submit"
+                  disabled={status === 'loading'}
+                  className="btn-2026 !w-full !py-5 flex justify-center items-center gap-3 disabled:opacity-60 disabled:cursor-not-allowed"
+                >
+                  {status === 'loading' ? (
+                    <>
+                      <Loader2 size={18} className="animate-spin" />
+                      Enviando...
+                    </>
+                  ) : (
+                    <>
+                      Confirmar Inscrição <Send size={18} />
+                    </>
+                  )}
                 </button>
               </div>
             </form>

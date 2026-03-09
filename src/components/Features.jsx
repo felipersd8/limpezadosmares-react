@@ -127,7 +127,7 @@ const Features = () => {
             <span className="text-primary font-bold tracking-[0.3em] uppercase text-[10px] mb-4 block">
               Nossa Infraestrutura
             </span>
-            <h2 className="text-4xl md:text-6xl font-black leading-none">
+            <h2 className="text-[clamp(1.6rem,7vw,2.25rem)] md:text-6xl font-black leading-none">
               PILARES DA <br />
               <span className="text-reveal">TRANSFORMAÇÃO</span>
             </h2>
