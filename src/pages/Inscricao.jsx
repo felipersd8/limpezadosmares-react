@@ -157,12 +157,11 @@ const Inscricao = () => {
               {/* Category */}
               <div className="md:col-span-2 space-y-4">
                 <label className="text-[10px] font-black tracking-widest uppercase text-text-muted ml-2">Categoria de Participação</label>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                   {[
                     { id: 'voluntario', label: 'Voluntário Praia' },
                     { id: 'tartaruga', label: 'Tartaruga (Kids)' },
                     { id: 'estrela', label: 'Estrela do Mar' },
-                    { id: 'mergulho', label: 'Mergulho / Embarcado' }
                   ].map((cat) => (
                     <label key={cat.id} className="cursor-pointer group">
                       <input 
@@ -184,7 +183,7 @@ const Inscricao = () => {
                   ))}
                 </div>
                 <p className="text-[10px] text-text-muted italic text-center mt-4">
-                  * Inscrições para Mergulho e Embarcado estão sujeitas a confirmação de disponibilidade e aprovação prévia.
+                  * Para mergulho ou vagas embarcadas (saída de Canasvieiras), entre em contato com a Acquanauta Floripa: (48) 99933-0062 ou (48) 3266-1137.
                 </p>
               </div>
 

@@ -24,39 +24,48 @@ const Agenda = () => {
               <span className="text-primary drop-shadow-[0_0_30px_rgba(16,185,129,0.4)]">21/03</span>
             </h2>
             
-            <p className="text-xl text-text-muted mb-10 leading-relaxed font-light max-w-xl">
-              Próxima Etapa: <span className="text-white font-bold">Praia do Tinguá</span>.<br/> 
-              Governador Celso Ramos. Ação especial em alusão ao Dia Mundial da Água! 
-              A saída do barco é em Canasvieiras.
+            <p className="text-xl text-text-muted mb-8 leading-relaxed font-light max-w-xl">
+              Próxima Etapa: <span className="text-white font-bold">Praia do Tinguá</span>.<br/>
+              Governador Celso Ramos/SC. Ação especial em alusão ao Dia Mundial da Água!<br/>
+              📅 21 de março · Das 9h às 12h
             </p>
-            
-            <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <motion.button 
-                onClick={() => window.location.href = '/inscricao'} 
+
+            {/* Beach Registration */}
+            <div className="mb-6">
+              <p className="text-sm text-text-muted mb-3 uppercase tracking-widest font-bold">Inscrições para a Praia — Tartaruga e Estrela do Mar:</p>
+              <motion.button
+                onClick={() => window.location.href = '/inscricao'}
                 className="btn-2026 shadow-glow inline-flex items-center justify-center gap-3"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Inscrição Praia
+                Clique aqui para se inscrever!
                 <Anchor size={18} />
               </motion.button>
-
-              <motion.a 
-                href="https://wa.me/5548999330062?text=Olá, gostaria de me inscrever para a etapa embarcada/mergulho no Tinguá." 
-                target="_blank"
-                rel="noopener noreferrer"
-                className="btn-2026 !bg-primary !text-white shadow-glow inline-flex items-center justify-center gap-3"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                Vagas Embarcado
-                <Anchor size={18} />
-              </motion.a>
             </div>
 
-            <p className="text-xs text-text-muted italic max-w-sm">
-              * Inscrição normal para categorias Tartaruga e Estrela do Mar. Vagas para embarque/mergulho sob consulta e aprovação via WhatsApp.
-            </p>
+            {/* Boat / Dive Registration */}
+            <div className="mb-10 p-5 rounded-2xl border border-white/10 bg-white/5 max-w-xl">
+              <p className="text-sm font-bold uppercase tracking-widest text-text-muted mb-3">Vagas Embarcado / Mergulhador (Golfinho) — saída de Canasvieiras:</p>
+              <p className="text-sm text-text-muted mb-4 leading-relaxed">Vagas limitadas · Inscrições via Acquanauta Floripa:</p>
+              <div className="flex flex-col sm:flex-row gap-3">
+                <motion.a
+                  href="https://wa.me/5548999330062?text=Olá, gostaria de me inscrever para a etapa embarcada/mergulho no Tinguá."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn-2026 !bg-primary !text-white shadow-glow inline-flex items-center justify-center gap-3 text-sm"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  WhatsApp Acquanauta
+                  <Anchor size={16} />
+                </motion.a>
+                <div className="flex flex-col justify-center text-sm text-text-muted">
+                  <span>📞 (48) 99933-0062</span>
+                  <span>📞 (48) 3266-1137</span>
+                </div>
+              </div>
+            </div>
           </motion.div>
 
           <motion.div 

@@ -50,10 +50,10 @@ const PostDetails = () => {
           {images.length > 0 && (
             <div className="rounded-[2.5rem] overflow-hidden glass p-3 mb-16 shadow-2xl relative group">
               <div className="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-700 mix-blend-overlay z-10 pointer-events-none" />
-              <img 
-                src={images[0]} 
-                alt={post.title} 
-                className="w-full h-[60vh] rounded-[2rem] object-cover transition-transform duration-1000 group-hover:scale-[1.03]"
+              <img
+                src={images[0]}
+                alt={post.title}
+                className="w-full max-h-[80vh] rounded-[2rem] object-contain transition-transform duration-1000 group-hover:scale-[1.03]"
                 onError={(e) => {
                    e.target.style.display = 'none';
                 }}

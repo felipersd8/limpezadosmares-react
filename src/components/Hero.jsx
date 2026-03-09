@@ -25,8 +25,8 @@ const Hero = () => {
           <source src="/videohome.mp4" type="video/mp4" />
         </video>
         {/* Deep Sea Overlay - Oceano Profundo Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#020617]/40 via-[#020617]/60 to-[#020617] mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#05203a]/40 via-[#05203a]/60 to-[#05203a] mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#05203a] via-transparent to-transparent z-10" />
       </motion.div>
 
       {/* Main Content */}
@@ -58,7 +58,7 @@ const Hero = () => {
             transition={{ delay: 0.8, duration: 1 }}
             className="text-xl md:text-2xl text-text-muted max-w-3xl mx-auto mb-16 font-light leading-relaxed drop-shadow-md"
           >
-            Desde 2014, transformamos a realidade dos nossos mares. Junte-se à missão que já removeu mais de 191 toneladas de resíduos e inspira o mundo.
+            Desde 2014, transformamos a realidade dos nossos mares. Junte-se à missão que já removeu mais de 193 toneladas de resíduos e inspira o mundo.
           </motion.p>
 
           <motion.div 

@@ -27,9 +27,9 @@ const AnimatedCounter = ({ from, to, duration = 2, suffix = "" }) => {
 
 const Stats = () => {
   const stats = [
-    { label: "Resíduos Removidos", value: 191, suffix: "T+", sub: "Toneladas de impacto" },
-    { label: "Etapas Realizadas", value: 42, suffix: "+", sub: "Ações coordenadas" },
-    { label: "Anos de História", value: 11, suffix: "", sub: "Desde 2014" },
+    { label: "Resíduos Removidos", value: 193, suffix: "T+", sub: "Toneladas de impacto" },
+    { label: "Etapas Realizadas", value: 51, suffix: "+", sub: "Ações coordenadas" },
+    { label: "Anos de História", value: 12, suffix: "", sub: "Desde 2014" },
     { label: "Voluntários", value: 5000, suffix: "+", sub: "Engajamento total" },
   ];
 
