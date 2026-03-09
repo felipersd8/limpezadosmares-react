@@ -19,15 +19,15 @@ const Agenda = () => {
               <span className="font-bold tracking-widest text-xs uppercase">Próxima Etapa</span>
             </div>
             
-            <h2 className="text-4xl md:text-7xl font-bold mb-8 text-white leading-tight" style={{ fontFamily: 'Syncopate, sans-serif' }}>
+            <h2 className="text-4xl md:text-7xl font-black mb-8 text-white leading-tight" style={{ fontFamily: 'Syncopate, sans-serif' }}>
               Vem aí: <br/>
-              <span className="text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">21/03</span>
+              <span className="text-primary drop-shadow-[0_0_30px_rgba(16,185,129,0.4)]">21/03</span>
             </h2>
             
-            <p className="text-xl text-white mb-8 leading-relaxed font-light max-w-xl">
-              Próxima Etapa: <span className="text-white font-bold underline decoration-primary/40">Praia do Tinguá</span>.<br/>
+            <p className="text-xl text-white/90 mb-8 leading-relaxed font-medium max-w-xl">
+              Próxima Etapa: <span className="text-white font-black underline underline-offset-8 decoration-primary/60">Praia do Tinguá</span>.<br/>
               Governador Celso Ramos/SC. Ação especial em alusão ao Dia Mundial da Água!<br/>
-              📅 21 de março · Das 9h às 12h
+              📅 <span className="text-primary font-bold">21 de março</span> · Das 9h às 12h
             </p>
 
             {/* Beach Registration */}
