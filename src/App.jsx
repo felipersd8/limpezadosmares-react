@@ -25,6 +25,7 @@ import Agenda from './components/Agenda';
 import Blog from './components/Blog';
 import PostDetails from './components/PostDetails';
 import Etapas from './components/Etapas';
+import Inscricao from './pages/Inscricao';
 
 const Home = () => (
   <>
@@ -48,6 +49,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/noticias" element={<Blog />} />
             <Route path="/noticia/:slug" element={<PostDetails />} />
+            <Route path="/inscricao" element={<Inscricao />} />
           </Routes>
         </main>
         

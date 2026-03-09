@@ -31,17 +31,15 @@ const Agenda = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row gap-4 mb-10">
-              <motion.a 
-                href="https://limpezadosmares.com" 
-                target="_blank"
-                rel="noopener noreferrer"
+              <motion.button 
+                onClick={() => window.location.href = '/inscricao'} 
                 className="btn-2026 shadow-glow inline-flex items-center justify-center gap-3"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
                 Inscrição Praia
                 <Anchor size={18} />
-              </motion.a>
+              </motion.button>
 
               <motion.a 
                 href="https://wa.me/5548999330062?text=Olá, gostaria de me inscrever para a etapa embarcada/mergulho no Tinguá." 

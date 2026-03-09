@@ -62,9 +62,9 @@ const Header = () => {
               })}
             </div>
             
-            <button className="btn-2026 py-2 px-6 text-xs bg-white text-bg hover:bg-primary shadow-glow">
-              ENVOLVA-SE
-            </button>
+            <Link to="/inscricao" className="btn-2026 py-2 px-6 text-xs bg-white text-bg hover:bg-primary shadow-glow">
+              INSCREVA-SE
+            </Link>
           </div>
 
           {/* Mobile Toggle */}
