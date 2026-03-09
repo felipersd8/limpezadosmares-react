@@ -35,9 +35,9 @@ const Agenda = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
           >
-            <div className="inline-flex items-center gap-2 mb-6 bg-primary/10 px-5 py-2 rounded-full border border-primary/20 text-primary shadow-[0_0_20px_rgba(16,185,129,0.15)]">
-              <Calendar size={18} />
-              <span className="font-bold tracking-widest text-xs uppercase">Próxima Etapa</span>
+            <div className="inline-flex items-center gap-2 mb-6 bg-white/20 px-5 py-2 rounded-full border border-white/30 text-white shadow-lg backdrop-blur-sm">
+              <Calendar size={18} className="text-cyan-300" />
+              <span className="font-black tracking-widest text-xs uppercase">Próxima Etapa</span>
             </div>
             
             <h2 className="text-4xl md:text-8xl font-black mb-8 text-white leading-tight drop-shadow-[0_10px_10px_rgba(0,0,0,0.3)]" style={{ fontFamily: 'Syncopate, sans-serif' }}>
