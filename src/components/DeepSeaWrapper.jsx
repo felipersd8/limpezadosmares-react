@@ -20,7 +20,7 @@ const DeepSeaWrapper = ({ children }) => {
   }));
 
   return (
-    <div className="relative overflow-hidden bg-[#2596be]">
+    <div className="relative overflow-hidden bg-[#01274f]">
       {/* Transition Wave from Hero (Video) */}
       <div className="absolute top-0 left-0 w-full h-32 z-10 pointer-events-none rotate-180 opacity-40">
         <svg className="w-full h-full" preserveAspectRatio="none" viewBox="0 0 1440 320">
