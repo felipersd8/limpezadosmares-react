@@ -27,14 +27,17 @@ import PostDetails from './components/PostDetails';
 import Etapas from './components/Etapas';
 import Inscricao from './pages/Inscricao';
 import Painel from './pages/Painel';
+import DeepSeaWrapper from './components/DeepSeaWrapper';
 
 const Home = () => (
   <>
     <Hero />
-    <Features />
-    <Etapas />
-    <Stats />
-    <Agenda />
+    <DeepSeaWrapper>
+      <Features />
+      <Etapas />
+      <Stats />
+      <Agenda />
+    </DeepSeaWrapper>
   </>
 );
 
