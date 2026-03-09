@@ -1,15 +1,70 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Users, Trash2, Award, Zap } from 'lucide-react';
+
+const AnimatedPath = ({ d }) => (
+  <motion.path
+    d={d}
+    initial={{ pathLength: 0, opacity: 0 }}
+    whileInView={{ pathLength: 1, opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 2, ease: "easeInOut", delay: 0.2 }}
+  />
+);
+
+const AnimatedCircle = ({ cx, cy, r }) => (
+  <motion.circle
+    cx={cx} cy={cy} r={r}
+    initial={{ pathLength: 0, opacity: 0 }}
+    whileInView={{ pathLength: 1, opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 2, ease: "easeInOut", delay: 0.4 }}
+  />
+);
+
+const AnimatedPolygon = ({ points }) => (
+  <motion.polygon
+    points={points}
+    initial={{ pathLength: 0, opacity: 0 }}
+    whileInView={{ pathLength: 1, opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 2, ease: "easeInOut", delay: 0.2 }}
+  />
+);
+
+const AnimatedPolyline = ({ points }) => (
+  <motion.polyline
+    points={points}
+    initial={{ pathLength: 0, opacity: 0 }}
+    whileInView={{ pathLength: 1, opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 2, ease: "easeInOut", delay: 0.6 }}
+  />
+);
+
+const IconWrapper = ({ children }) => (
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="48" height="48"
+    viewBox="0 0 24 24" fill="none"
+    stroke="url(#gradient-icon)" strokeWidth="1.5"
+    strokeLinecap="round" strokeLinejoin="round"
+  >
+    <defs>
+      <linearGradient id="gradient-icon" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stopColor="#38bdf8" />
+        <stop offset="100%" stopColor="#818cf8" />
+      </linearGradient>
+    </defs>
+    {children}
+  </svg>
+);
 
 const Features = () => {
   const container = {
     hidden: { opacity: 0 },
     show: {
       opacity: 1,
-      transition: {
-        staggerChildren: 0.15
-      }
+      transition: { staggerChildren: 0.15 }
     }
   };
 
@@ -20,22 +75,45 @@ const Features = () => {
 
   const cards = [
     {
-      icon: <Users size={32} />,
+      icon: (
+        <IconWrapper>
+          <AnimatedPath d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
+          <AnimatedCircle cx="9" cy="7" r="4" />
+          <AnimatedPath d="M22 21v-2a4 4 0 0 0-3-3.87" />
+          <AnimatedPath d="M16 3.13a4 4 0 0 1 0 7.75" />
+        </IconWrapper>
+      ),
       title: "Voluntários",
       desc: "Uma rede global de pessoas dedicadas a proteger o ecossistema marinho."
     },
     {
-      icon: <Trash2 size={32} />,
+      icon: (
+        <IconWrapper>
+          <AnimatedPath d="M3 6h18" />
+          <AnimatedPath d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+          <AnimatedPath d="M10 11v6" />
+          <AnimatedPath d="M14 11v6" />
+        </IconWrapper>
+      ),
       title: "Ações Reais",
       desc: "Mutirões intensivos de remoção de resíduos em todo o litoral catarinense."
     },
     {
-      icon: <Award size={32} />,
+      icon: (
+        <IconWrapper>
+          <AnimatedCircle cx="12" cy="8" r="7" />
+          <AnimatedPolyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
+        </IconWrapper>
+      ),
       title: "Reconhecimento",
       desc: "Premiado como um dos projetos ambientais mais eficazes do Brasil."
     },
     {
-      icon: <Zap size={32} />,
+      icon: (
+        <IconWrapper>
+          <AnimatedPolygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
+        </IconWrapper>
+      ),
       title: "Inovação",
       desc: "Uso de tecnologias modernas para triagem e destinação correta de resíduos."
     }
