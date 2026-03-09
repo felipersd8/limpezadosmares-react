@@ -33,9 +33,9 @@ const Header = () => {
           {/* Logo */}
             <Link to="/" className="flex items-center group relative z-20">
               <img 
-                src="/images/logo-blue.png" 
+                src="/uploads/2025/03/LOGO-BRANCO-FUNDO-TRANSPARENTE-1-1024x889.png" 
                 alt="Limpeza dos Mares Logo" 
-                className="h-10 w-auto object-contain transition-transform duration-500 group-hover:scale-110"
+                className="h-14 w-auto object-contain transition-transform duration-500 group-hover:scale-110"
               />
               <div className="absolute -inset-2 bg-primary/5 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity blur-lg" />
             </Link>

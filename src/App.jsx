@@ -45,11 +45,11 @@ const PublicLayout = ({ children }) => (
     <main>{children}</main>
     <footer className="glass mt-20 py-12 text-center border-t border-white/5">
       <div className="container mx-auto px-4">
-        <Link to="/" className="w-16 h-16 bg-white/5 rounded-2xl flex items-center justify-center group overflow-hidden border border-white/5 hover:border-primary/20 transition-colors mx-auto mb-6">
+        <Link to="/" className="w-20 h-20 bg-white/5 rounded-2xl flex items-center justify-center group overflow-hidden border border-white/5 hover:border-primary/20 transition-colors mx-auto mb-6">
           <img
-            src="/images/logo-blue.png"
+            src="/uploads/2025/03/LOGO-BRANCO-FUNDO-TRANSPARENTE-1-1024x889.png"
             alt="Logo"
-            className="w-10 h-10 object-contain transition-transform duration-500 group-hover:scale-110"
+            className="w-16 h-16 object-contain transition-transform duration-500 group-hover:scale-110"
           />
         </Link>
         <p className="text-text-muted text-lg max-w-xl mx-auto mb-8 font-medium italic">

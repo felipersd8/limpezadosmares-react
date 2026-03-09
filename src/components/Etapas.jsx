@@ -48,7 +48,7 @@ const Etapas = ({ data = [] }) => {
                       <img 
                         src={etapa.img} 
                         alt={etapa.title} 
-                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                        className="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110 p-2"
                         onError={(e) => {
                           e.target.onerror = null;
                           e.target.src = 'https://via.placeholder.com/800x600?text=Etapa';

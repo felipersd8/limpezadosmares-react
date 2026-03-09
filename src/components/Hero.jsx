@@ -24,9 +24,9 @@ const Hero = () => {
         >
           <source src="/videohome.mp4" type="video/mp4" />
         </video>
-        {/* Deep Sea Overlay - Oceano Profundo Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#05203a]/40 via-[#05203a]/60 to-[#05203a] mix-blend-multiply" />
-        <div className="absolute inset-0 bg-gradient-to-t from-[#05203a] via-transparent to-transparent z-10" />
+        {/* Deep Sea Overlay - Brand Identity Colors */}
+        <div className="absolute inset-0 bg-gradient-to-b from-[#2a2a6b]/40 via-[#2596be]/60 to-[#2596be] mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-t from-[#2596be] via-transparent to-transparent z-10" />
       </motion.div>
 
       {/* Main Content */}

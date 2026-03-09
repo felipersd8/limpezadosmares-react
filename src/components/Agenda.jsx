@@ -78,8 +78,8 @@ const Agenda = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             
             <div className="relative z-10 w-full">
-              <h3 className="text-sm font-bold text-center mb-6 tracking-[0.2em] text-text-muted uppercase">Patrocinador Mantenedor</h3>
-              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-3xl flex justify-center shadow-2xl hover:bg-white transition-colors duration-300">
+              <h3 className="text-sm font-bold text-center mb-6 tracking-[0.2em] text-white uppercase drop-shadow-md">Patrocinador Diamante</h3>
+              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-3xl flex justify-center shadow-2xl hover:bg-white transition-colors duration-300 border border-white/10">
                 <img 
                   src="/images/logofort.png" 
                   alt="Fort Atacadista" 
@@ -88,9 +88,9 @@ const Agenda = () => {
               </div>
             </div>
             
-            <div className="relative z-10 w-full pt-10 border-t border-white/5">
-              <h3 className="text-sm font-bold text-center mb-6 tracking-[0.2em] text-text-muted uppercase">Apoiadores Oficiais</h3>
-              <div className="flex justify-center gap-10 items-center flex-wrap bg-white/90 backdrop-blur-sm p-6 rounded-3xl shadow-xl hover:bg-white transition-colors duration-300">
+            <div className="relative z-10 w-full pt-10 border-t border-white/10">
+              <h3 className="text-sm font-bold text-center mb-6 tracking-[0.2em] text-white uppercase drop-shadow-md">Patrocinadores Oficiais</h3>
+              <div className="flex justify-center gap-10 items-center flex-wrap bg-white/90 backdrop-blur-sm p-6 rounded-3xl shadow-xl hover:bg-white transition-colors duration-300 border border-white/10">
                 <img src="/images/navitec.jpeg" alt="Navitec" className="max-h-[50px] object-contain mix-blend-multiply hover:scale-110 transition-transform duration-300" />
                 <img src="/images/sitelimpezadosmares.jpg" alt="Apoiador Limpeza" className="max-h-[50px] object-contain mix-blend-multiply hover:scale-110 transition-transform duration-300" />
               </div>

@@ -5,17 +5,17 @@
 @tailwind utilities;
 
 :root {
-  /* Ocean Recovery 2026 Palette */
-  --color-bg: #05203a; /* Deep Ocean Blue */
-  --color-surface: rgba(8, 40, 72, 0.6);
-  --color-surface-brighter: rgba(12, 58, 100, 0.4);
-  --color-primary: #10b981; /* Fresh Emerald/Seafoam */
-  --color-secondary: #38bdf8; /* Ocean Sky Blue */
-  --color-accent: #34d399;
-  --color-text: #f0f8ff;
-  --color-text-muted: #93c5d8;
-  --color-glass: rgba(255, 255, 255, 0.04);
-  --color-glass-border: rgba(255, 255, 255, 0.10);
+  /* Ocean Recovery 2026 Palette - Updated Brand Identity */
+  --color-bg: #2596be; /* Main Brand Background */
+  --color-surface: rgba(45, 71, 135, 0.4); /* Based on #2d4787 */
+  --color-surface-brighter: rgba(52, 137, 201, 0.3); /* Based on #3489c9 */
+  --color-primary: #3489c9; /* Brand Primary */
+  --color-secondary: #2a2a6b; /* Brand Secondary (Deep) */
+  --color-accent: #3060a0; /* Brand Accent */
+  --color-text: #ffffff;
+  --color-text-muted: #e0f2f7;
+  --color-glass: rgba(255, 255, 255, 0.08);
+  --color-glass-border: rgba(255, 255, 255, 0.20);
   
   --font-heading: 'Syncopate', sans-serif;
   --font-body: 'Plus Jakarta Sans', sans-serif;
