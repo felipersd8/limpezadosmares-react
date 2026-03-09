@@ -13,14 +13,19 @@ const Hero = () => {
       {/* Parallax Background */}
       <motion.div 
         style={{ y: y1, scale, opacity }}
-        className="absolute inset-0 z-0 origin-bottom"
+        className="absolute inset-0 z-0 origin-bottom h-full w-full"
       >
-        <div 
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: 'url(/images/hero-scuba.png)' }}
-        />
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover"
+        >
+          <source src="/videohome.mp4" type="video/mp4" />
+        </video>
         {/* Deep Sea Overlay - Oceano Profundo Gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#020617]/30 via-[#020617]/50 to-[#020617] mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#020617]/40 via-[#020617]/60 to-[#020617] mix-blend-multiply" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#020617] via-transparent to-transparent z-10" />
       </motion.div>
 
