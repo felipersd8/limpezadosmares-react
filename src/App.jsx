@@ -1,5 +1,22 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+
+const ScrollToHash = () => {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const element = document.getElementById(hash.substring(1));
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [hash]);
+
+  return null;
+};
+
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Features from './components/Features';
@@ -7,11 +24,13 @@ import Stats from './components/Stats';
 import Agenda from './components/Agenda';
 import Blog from './components/Blog';
 import PostDetails from './components/PostDetails';
+import Etapas from './components/Etapas';
 
 const Home = () => (
   <>
     <Hero />
     <Features />
+    <Etapas />
     <Stats />
     <Agenda />
   </>
@@ -20,6 +39,7 @@ const Home = () => (
 function App() {
   return (
     <Router>
+      <ScrollToHash />
       <div className="min-h-screen pt-20">
         <Header />
         

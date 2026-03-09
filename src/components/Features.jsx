@@ -120,7 +120,7 @@ const Features = () => {
   ];
 
   return (
-    <section id="about" className="relative overflow-hidden">
+    <section id="features" className="relative overflow-hidden">
       <div className="container-mega">
         <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
           <div className="max-w-2xl">

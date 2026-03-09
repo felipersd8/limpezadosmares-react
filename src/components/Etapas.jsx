@@ -13,7 +13,7 @@ const Etapas = ({ data = [] }) => {
   const displayData = data.length > 0 ? data : defaultEtapas;
 
   return (
-    <section className="py-32 relative overflow-hidden">
+    <section id="etapas" className="py-32 relative overflow-hidden">
       <div className="container-mega">
         <div className="mb-20">
           <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] mb-4 block">

@@ -34,7 +34,7 @@ const Stats = () => {
   ];
 
   return (
-    <section className="relative py-32">
+    <section id="stats" className="relative py-32">
       <div className="container-mega">
         <div className="glass-2026 p-16 md:p-24 overflow-hidden relative">
           {/* Animated Background Decoration */}
