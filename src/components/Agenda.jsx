@@ -21,11 +21,11 @@ const Agenda = () => {
             
             <h2 className="text-4xl md:text-7xl font-bold mb-8 text-white leading-tight" style={{ fontFamily: 'Syncopate, sans-serif' }}>
               Vem aí: <br/>
-              <span className="text-primary drop-shadow-[0_0_30px_rgba(16,185,129,0.4)]">21/03</span>
+              <span className="text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]">21/03</span>
             </h2>
             
-            <p className="text-xl text-text-muted mb-8 leading-relaxed font-light max-w-xl">
-              Próxima Etapa: <span className="text-white font-bold">Praia do Tinguá</span>.<br/>
+            <p className="text-xl text-white mb-8 leading-relaxed font-light max-w-xl">
+              Próxima Etapa: <span className="text-white font-bold underline decoration-primary/40">Praia do Tinguá</span>.<br/>
               Governador Celso Ramos/SC. Ação especial em alusão ao Dia Mundial da Água!<br/>
               📅 21 de março · Das 9h às 12h
             </p>
@@ -45,22 +45,22 @@ const Agenda = () => {
             </div>
 
             {/* Boat / Dive Registration */}
-            <div className="mb-10 p-5 rounded-2xl border border-white/10 bg-white/5 max-w-xl">
-              <p className="text-sm font-bold uppercase tracking-widest text-text-muted mb-3">Vagas Embarcado / Mergulhador (Golfinho) — saída de Canasvieiras:</p>
-              <p className="text-sm text-text-muted mb-4 leading-relaxed">Vagas limitadas · Inscrições via Acquanauta Floripa:</p>
+            <div className="mb-10 p-5 rounded-2xl border border-white/20 bg-white/10 max-w-xl shadow-lg">
+              <p className="text-sm font-bold uppercase tracking-widest text-white mb-3">Vagas Embarcado / Mergulhador (Golfinho) — saída de Canasvieiras:</p>
+              <p className="text-sm text-white/90 mb-4 leading-relaxed">Vagas limitadas · Inscrições via Acquanauta Floripa:</p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <motion.a
                   href="https://wa.me/5548999330062?text=Olá, gostaria de me inscrever para a etapa embarcada/mergulho no Tinguá."
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="btn-2026 !bg-primary !text-white shadow-glow inline-flex items-center justify-center gap-3 text-sm"
+                  className="btn-2026 !bg-white !text-secondary shadow-glow inline-flex items-center justify-center gap-3 text-sm"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   WhatsApp Acquanauta
                   <Anchor size={16} />
                 </motion.a>
-                <div className="flex flex-col justify-center text-sm text-text-muted">
+                <div className="flex flex-col justify-center text-sm text-white font-medium">
                   <span>📞 (48) 99933-0062</span>
                   <span>📞 (48) 3266-1137</span>
                 </div>
@@ -78,8 +78,8 @@ const Agenda = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
             
             <div className="relative z-10 w-full">
-              <h3 className="text-sm font-bold text-center mb-6 tracking-[0.2em] text-white uppercase drop-shadow-md">Patrocinador Diamante</h3>
-              <div className="bg-white/90 backdrop-blur-sm p-8 rounded-3xl flex justify-center shadow-2xl hover:bg-white transition-colors duration-300 border border-white/10">
+              <h3 className="text-sm font-bold text-center mb-6 tracking-[0.2em] text-white uppercase drop-shadow-md">Patrocínio Mantenedor</h3>
+              <div className="bg-white/95 backdrop-blur-sm p-8 rounded-3xl flex justify-center shadow-2xl hover:bg-white transition-colors duration-300 border border-white/20">
                 <img 
                   src="/images/logofort.png" 
                   alt="Fort Atacadista" 
@@ -88,9 +88,9 @@ const Agenda = () => {
               </div>
             </div>
             
-            <div className="relative z-10 w-full pt-10 border-t border-white/10">
-              <h3 className="text-sm font-bold text-center mb-6 tracking-[0.2em] text-white uppercase drop-shadow-md">Patrocinadores Oficiais</h3>
-              <div className="flex justify-center gap-10 items-center flex-wrap bg-white/90 backdrop-blur-sm p-6 rounded-3xl shadow-xl hover:bg-white transition-colors duration-300 border border-white/10">
+            <div className="relative z-10 w-full pt-10 border-t border-white/20">
+              <h3 className="text-sm font-bold text-center mb-6 tracking-[0.2em] text-white uppercase drop-shadow-md">Apoio Oficial</h3>
+              <div className="flex justify-center gap-10 items-center flex-wrap bg-white/95 backdrop-blur-sm p-6 rounded-3xl shadow-xl hover:bg-white transition-colors duration-300 border border-white/20">
                 <img src="/images/navitec.jpeg" alt="Navitec" className="max-h-[50px] object-contain mix-blend-multiply hover:scale-110 transition-transform duration-300" />
                 <img src="/images/sitelimpezadosmares.jpg" alt="Apoiador Limpeza" className="max-h-[50px] object-contain mix-blend-multiply hover:scale-110 transition-transform duration-300" />
               </div>
