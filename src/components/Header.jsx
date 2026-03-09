@@ -29,7 +29,7 @@ const Header = () => {
       className={`fixed top-4 left-0 right-0 z-50 transition-all duration-700 px-4 flex justify-center w-full`}
     >
       <nav className={`w-full transition-all duration-700 origin-top transform ${isScrolled ? 'max-w-4xl scale-95 translate-y-2' : 'max-w-7xl'}`}>
-        <div className={`glass-2026 px-6 py-3 flex items-center justify-between transition-all duration-700 shadow-glass ${isScrolled ? 'rounded-[2rem] bg-bg/80 border-white/10' : 'rounded-[1.5rem] bg-bg/40 border-transparent hover:border-white/5'}`}>
+        <div className={`glass-2026 px-6 py-3 flex items-center justify-between transition-all duration-700 shadow-glass ${isScrolled ? 'rounded-[2rem] bg-secondary/80 border-white/10' : 'rounded-[1.5rem] bg-primary/20 backdrop-blur-md border-white/5 hover:border-white/20'}`}>
           {/* Logo */}
             <Link to="/" className="flex items-center group relative z-20">
               <img 

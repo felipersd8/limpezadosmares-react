@@ -40,7 +40,7 @@ const Home = () => (
 
 // Layout principal (com Header e Footer)
 const PublicLayout = ({ children }) => (
-  <div className="min-h-screen pt-20">
+  <div className="min-h-screen">
     <Header />
     <main>{children}</main>
     <footer className="glass mt-20 py-12 text-center border-t border-white/5">
