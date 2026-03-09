@@ -50,7 +50,7 @@ const Header = () => {
                 return (
                   <Link
                     key={link.name}
-                    to={link.path.startsWith('/#') && location.pathname === '/' ? link.path.substring(1) : link.path}
+                    to={link.path}
                     className={`text-[0.7rem] font-bold tracking-[0.15em] uppercase transition-all duration-300 relative group overflow-hidden px-1 py-1
                     ${isActive ? 'text-white' : 'text-text-muted hover:text-white'}`}
                   >
@@ -93,7 +93,7 @@ const Header = () => {
                 {navLinks.map((link) => (
                   <Link
                     key={link.name}
-                    to={link.path.startsWith('/#') && location.pathname === '/' ? link.path.substring(1) : link.path}
+                    to={link.path}
                     onClick={() => setIsMobileMenuOpen(false)}
                     className={`text-sm font-bold tracking-widest uppercase py-3 border-b border-white/5 transition-colors ${
                       location.pathname === link.path ? 'text-primary pl-2' : 'text-white hover:text-primary hover:pl-2'
