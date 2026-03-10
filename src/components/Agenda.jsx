@@ -108,25 +108,40 @@ const Agenda = () => {
                 PATROCINADORES OFICIAIS
               </h3>
               <div className="grid grid-cols-2 gap-8 items-center justify-items-center">
-                <img 
-                  src="/sanauticalogotransparente.png" 
-                  alt="Sanáutica" 
-                  className="h-16 w-32 object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500" 
+                <img
+                  src="/sanauticalogotransparente.png"
+                  alt="Sanáutica"
+                  className="h-16 w-32 object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500"
                 />
-                <img 
-                  src="/marinaatlantidatransparente.png" 
-                  alt="Marina Atlântida" 
-                  className="h-16 w-32 object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500" 
+                <img
+                  src="/marinaatlantidatransparente.png"
+                  alt="Marina Atlântida"
+                  className="h-16 w-32 object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500"
                 />
-                <img 
-                  src="/bluefoxlogotrasnparente.png" 
-                  alt="Marina Blue Fox" 
-                  className="h-16 w-32 object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500" 
+                <img
+                  src="/bluefoxlogotrasnparente.png"
+                  alt="Marina Blue Fox"
+                  className="h-16 w-32 object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500"
                 />
-                <img 
-                  src="/logonavitectransparente.png" 
-                  alt="Navitec" 
-                  className="h-16 w-32 object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500" 
+                <img
+                  src="/logonavitectransparente.png"
+                  alt="Navitec"
+                  className="h-16 w-32 object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500"
+                />
+              </div>
+            </div>
+
+            {/* Apoiadores Oficiais */}
+            <div className="glass-2026 p-8 border-white/10">
+              <h3 className="text-sm font-bold tracking-[0.2em] text-white/60 mb-8 flex items-center gap-3">
+                <span className="w-8 h-[1px] bg-white/20"></span>
+                APOIADORES OFICIAIS
+              </h3>
+              <div className="flex justify-center">
+                <img
+                  src="/logomanoscomunica%C3%A7%C3%A3ovisualtransparente.png"
+                  alt="Manos Comunicação Visual"
+                  className="h-16 w-auto object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500"
                 />
               </div>
             </div>

@@ -6,7 +6,7 @@ import posts from '../data/posts.json';
 
 const Etapas = ({ data = [] }) => {
   // Use posts from JSON as source of truth, but allow override via prop
-  const displayData = data.length > 0 ? data : posts.slice(0, 3).map(p => {
+  const displayData = data.length > 0 ? data : posts.slice(1, 4).map(p => {
     const titleLines = p.title.split('\n');
     return {
       title: titleLines[0].trim(),
@@ -25,8 +25,8 @@ const Etapas = ({ data = [] }) => {
             Nossa Jornada
           </span>
           <h2 className="text-4xl md:text-7xl font-black">
-            ETAPAS DO <br />
-            <span className="text-reveal">PROJETO</span>
+            ETAPAS JÁ <br />
+            <span className="text-reveal">REALIZADAS</span>
           </h2>
         </div>
 
