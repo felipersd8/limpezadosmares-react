@@ -84,45 +84,53 @@ const Agenda = () => {
             className="flex flex-col items-center justify-center gap-10 glass-2026 p-12 relative overflow-hidden group"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
-            
-            <div className="space-y-12">
-              {/* Patrocínio Mantenedor */}
-              <div className="flex flex-col items-center">
-                <h3 className="text-white/70 text-sm font-bold tracking-[0.2em] mb-8 pb-2 border-b border-white/10">
-                  PATROCÍNIO MANTENEDOR
-                </h3>
-                <div className="bg-white p-6 rounded-2xl shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 w-full max-w-[280px] group">
-                  <img 
-                    src="/uploads/2025/07/logofort.png" 
-                    alt="Fort Atacadista" 
-                    className="w-full h-auto object-contain filter group-hover:scale-105 transition-transform duration-500"
-                  />
-                </div>
-              </div>
-
-              {/* Apoio Oficial */}
-              <div className="flex flex-col items-center">
-                <h3 className="text-white/70 text-sm font-bold tracking-[0.2em] mb-8 pb-2 border-b border-white/10">
-                  APOIO OFICIAL
-                </h3>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-6 w-full max-w-4xl px-4">
-                  {[
-                    { src: "/uploads/2025/04/LogoSanautica-1-pdf.jpg", alt: "Sanáutica" },
-                    { src: "/uploads/2025/07/Marina-Atlantida-Logotipo.png", alt: "Marina Atlântida" },
-                    { src: "/uploads/2025/04/LOGO_MARINA_BLUE_FOX_HORIZ_FUNDO_BRANCO.png", alt: "Marina Blue Fox" },
-                    { src: "/uploads/2025/04/navitec.jpeg", alt: "Navitec" }
-                  ].map((logo, index) => (
-                    <div key={index} className="bg-white p-4 rounded-xl shadow-xl hover:shadow-cyan-500/10 transition-all duration-300 flex items-center justify-center group">
-                      <img 
-                        src={logo.src} 
-                        alt={logo.alt} 
-                        className="max-h-20 w-auto object-contain filter group-hover:scale-110 transition-transform duration-500"
-                      />
-                    </div>
-                  ))}
-                </div>
+          {/* Sponsorship & Partners with specialized tiers */}
+          <div className="space-y-12">
+            {/* Main Sponsor - Diamond Tier */}
+            <div className="glass-2026 p-8 border-cyan-500/30 bg-cyan-950/20">
+              <h3 className="text-sm font-bold tracking-[0.2em] text-cyan-400 mb-8 flex items-center gap-3">
+                <span className="w-8 h-[1px] bg-cyan-400/50"></span>
+                PATROCINADOR DIAMANTE
+              </h3>
+              <div className="flex justify-center">
+                <img 
+                  src="/logoforttransparente.png" 
+                  alt="Fort Atacadista" 
+                  className="h-24 w-auto object-contain hover:scale-110 transition-transform duration-500"
+                />
               </div>
             </div>
+
+            {/* Official Support - Official Sponsors Tier */}
+            <div className="glass-2026 p-8 border-white/10">
+              <h3 className="text-sm font-bold tracking-[0.2em] text-white/60 mb-8 flex items-center gap-3">
+                <span className="w-8 h-[1px] bg-white/20"></span>
+                PATROCINADORES OFICIAIS
+              </h3>
+              <div className="grid grid-cols-2 gap-8 items-center justify-items-center">
+                <img 
+                  src="/sanauticalogotransparente.png" 
+                  alt="Sanáutica" 
+                  className="h-16 w-32 object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500" 
+                />
+                <img 
+                  src="/marinaatlantidatransparente.png" 
+                  alt="Marina Atlântida" 
+                  className="h-16 w-32 object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500" 
+                />
+                <img 
+                  src="/bluefoxlogotrasnparente.png" 
+                  alt="Marina Blue Fox" 
+                  className="h-16 w-32 object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500" 
+                />
+                <img 
+                  src="/logonavitectransparente.png" 
+                  alt="Navitec" 
+                  className="h-16 w-32 object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500" 
+                />
+              </div>
+            </div>
+          </div>
           </motion.div>
 
         </div>
