@@ -11,7 +11,7 @@ const Inscricao = () => {
     email: '',
     whatsapp: '',
     city: '',
-    category: 'voluntario'
+    category: 'tartaruga'
   });
 
   const handleSubmit = async (e) => {
@@ -64,7 +64,7 @@ const Inscricao = () => {
           <button
             onClick={() => {
               setStatus('idle');
-              setFormData({ name: '', email: '', whatsapp: '', city: '', category: 'voluntario' });
+              setFormData({ name: '', email: '', whatsapp: '', city: '', category: 'tartaruga' });
             }}
             className="btn-2026"
           >
@@ -186,10 +186,9 @@ const Inscricao = () => {
               {/* Category */}
               <div className="md:col-span-2 space-y-4">
                 <label className="text-[10px] font-black tracking-widest uppercase text-text-muted ml-2">Categoria de Participação</label>
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   {[
-                    { id: 'voluntario', label: 'Voluntário Praia' },
-                    { id: 'tartaruga', label: 'Tartaruga (Kids)' },
+                    { id: 'tartaruga', label: 'Tartaruga' },
                     { id: 'estrela', label: 'Estrela do Mar' },
                   ].map((cat) => (
                     <label key={cat.id} className="cursor-pointer group">
