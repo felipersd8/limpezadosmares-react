@@ -85,63 +85,63 @@ const Agenda = () => {
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
           {/* Sponsorship & Partners with specialized tiers */}
-          <div className="space-y-12">
+          <div className="space-y-8 w-full">
             {/* Main Sponsor - Diamond Tier */}
-            <div className="glass-2026 p-8 border-cyan-500/30 bg-cyan-950/20">
-              <h3 className="text-sm font-bold tracking-[0.2em] text-cyan-400 mb-8 flex items-center gap-3">
+            <div className="glass-2026 p-6 border-cyan-500/30 bg-cyan-950/20">
+              <h3 className="text-xs font-bold tracking-[0.2em] text-cyan-400 mb-6 flex items-center gap-3">
                 <span className="w-8 h-[1px] bg-cyan-400/50"></span>
                 PATROCINADOR DIAMANTE
               </h3>
               <div className="flex justify-center">
-                <img 
-                  src="/logoforttransparente.png" 
-                  alt="Fort Atacadista" 
-                  className="w-full h-auto max-w-[160px] md:max-w-[200px] object-contain hover:scale-110 transition-transform duration-500 drop-shadow-lg"
+                <img
+                  src="/logoforttransparente.png"
+                  alt="Fort Atacadista"
+                  className="w-full h-auto max-w-[180px] md:max-w-[220px] object-contain hover:scale-110 transition-transform duration-500 drop-shadow-lg"
                 />
               </div>
             </div>
 
-            {/* Official Support - Official Sponsors Tier */}
-            <div className="glass-2026 p-8 border-white/10">
-              <h3 className="text-sm font-bold tracking-[0.2em] text-white/60 mb-8 flex items-center gap-3">
+            {/* Patrocinadores Oficiais — 2x2 grid com logos generosos */}
+            <div className="glass-2026 p-6 border-white/10">
+              <h3 className="text-xs font-bold tracking-[0.2em] text-white/60 mb-6 flex items-center gap-3">
                 <span className="w-8 h-[1px] bg-white/20"></span>
                 PATROCINADORES OFICIAIS
               </h3>
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center">
+              <div className="grid grid-cols-2 gap-6 items-center justify-items-center">
                 <img
                   src="/sanauticalogotransparente.png"
                   alt="Sanáutica"
-                  className="w-full h-auto max-w-[120px] md:max-w-[150px] object-contain hover:scale-105 transition-all duration-500 drop-shadow-md"
+                  className="w-full h-auto max-w-[150px] object-contain hover:scale-105 transition-all duration-500 drop-shadow-md"
                 />
                 <img
                   src="/marinaatlantidatransparente.png"
                   alt="Marina Atlântida"
-                  className="w-full h-auto max-w-[120px] md:max-w-[150px] object-contain hover:scale-105 transition-all duration-500 drop-shadow-md"
+                  className="w-full h-auto max-w-[150px] object-contain hover:scale-105 transition-all duration-500 drop-shadow-md"
                 />
                 <img
                   src="/bluefoxlogotrasnparente.png"
                   alt="Marina Blue Fox"
-                  className="w-full h-auto max-w-[120px] md:max-w-[150px] object-contain hover:scale-105 transition-all duration-500 drop-shadow-md"
+                  className="w-full h-auto max-w-[150px] object-contain hover:scale-105 transition-all duration-500 drop-shadow-md"
                 />
                 <img
                   src="/logonavitectransparente.png"
                   alt="Navitec"
-                  className="w-full h-auto max-w-[70px] md:max-w-[90px] object-contain hover:scale-105 transition-all duration-500 drop-shadow-md"
+                  className="w-full h-auto max-w-[100px] object-contain hover:scale-105 transition-all duration-500 drop-shadow-md"
                 />
               </div>
             </div>
 
-            {/* Apoiadores Oficiais */}
-            <div className="glass-2026 p-8 border-white/10">
-              <h3 className="text-sm font-bold tracking-[0.2em] text-white/60 mb-8 flex items-center gap-3">
+            {/* Apoiadores Oficiais — menor, sem corte */}
+            <div className="glass-2026 p-6 border-white/10">
+              <h3 className="text-xs font-bold tracking-[0.2em] text-white/60 mb-6 flex items-center gap-3">
                 <span className="w-8 h-[1px] bg-white/20"></span>
                 APOIADORES OFICIAIS
               </h3>
-              <div className="flex justify-center">
+              <div className="flex justify-center px-4">
                 <img
                   src="/logomanoscomunica%C3%A7%C3%A3ovisualtransparente.png"
                   alt="Manos Comunicação Visual"
-                  className="w-full h-auto max-w-[280px] md:max-w-[360px] object-contain hover:scale-105 transition-all duration-500 drop-shadow-md"
+                  className="w-full h-auto max-w-[200px] object-contain hover:scale-105 transition-all duration-500 drop-shadow-md"
                 />
               </div>
             </div>
