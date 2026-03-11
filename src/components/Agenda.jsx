@@ -131,17 +131,17 @@ const Agenda = () => {
               </div>
             </div>
 
-            {/* Apoiadores Oficiais — menor, sem corte */}
-            <div className="glass-2026 p-6 border-white/10">
-              <h3 className="text-xs font-bold tracking-[0.2em] text-white/60 mb-6 flex items-center gap-3">
+            {/* Apoiadores Oficiais */}
+            <div className="glass-2026 p-8 border-white/10">
+              <h3 className="text-xs font-bold tracking-[0.2em] text-white/60 mb-8 flex items-center gap-3">
                 <span className="w-8 h-[1px] bg-white/20"></span>
                 APOIADORES OFICIAIS
               </h3>
-              <div className="flex justify-center px-4">
+              <div className="flex justify-center">
                 <img
                   src="/logomanoscomunica%C3%A7%C3%A3ovisualtransparente.png"
                   alt="Manos Comunicação Visual"
-                  className="w-full h-auto max-w-[200px] object-contain hover:scale-105 transition-all duration-500 drop-shadow-md"
+                  className="w-full h-auto object-contain hover:scale-105 transition-all duration-500 drop-shadow-md"
                 />
               </div>
             </div>
