@@ -81,7 +81,7 @@ const Agenda = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="flex flex-col items-center justify-center gap-10 glass-2026 p-12 relative overflow-hidden group"
+            className="flex flex-col items-center justify-center gap-10 glass-2026 p-12 relative group"
           >
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
           {/* Sponsorship & Partners with specialized tiers */}
