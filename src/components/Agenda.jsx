@@ -92,7 +92,6 @@ const Agenda = () => {
                 <span className="w-8 h-[1px] bg-cyan-400/50"></span>
                 PATROCINADOR MANTENEDOR
               </h3>
-              <p className="text-[10px] text-cyan-400/60 mb-6 ml-11 tracking-widest">APOIO PRINCIPAL</p>
               <div className="flex justify-center">
                 <img
                   src="/logoforttransparente.png"
