@@ -22,6 +22,7 @@ const Header = () => {
     { name: 'Impacto', path: '/#stats' },
     { name: 'Notícias', path: '/noticias' },
     { name: 'Agenda', path: '/#agenda' },
+    { name: 'Loja', path: '/loja' },
   ];
 
   return (

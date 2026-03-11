@@ -27,6 +27,7 @@ import PostDetails from './components/PostDetails';
 import Etapas from './components/Etapas';
 import Inscricao from './pages/Inscricao';
 import Painel from './pages/Painel';
+import Store from './pages/Store';
 import DeepSeaWrapper from './components/DeepSeaWrapper';
 
 const Home = () => (
@@ -87,6 +88,7 @@ function App() {
               <Route path="/noticias" element={<Blog />} />
               <Route path="/noticia/:slug" element={<PostDetails />} />
               <Route path="/inscricao" element={<Inscricao />} />
+              <Route path="/loja" element={<Store />} />
             </Routes>
           </PublicLayout>
         } />
