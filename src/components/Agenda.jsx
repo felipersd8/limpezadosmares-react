@@ -96,7 +96,7 @@ const Agenda = () => {
                 <img 
                   src="/logoforttransparente.png" 
                   alt="Fort Atacadista" 
-                  className="h-24 w-auto object-contain hover:scale-110 transition-transform duration-500"
+                  className="w-full h-auto max-w-[160px] md:max-w-[200px] object-contain hover:scale-110 transition-transform duration-500 drop-shadow-lg"
                 />
               </div>
             </div>
@@ -107,26 +107,26 @@ const Agenda = () => {
                 <span className="w-8 h-[1px] bg-white/20"></span>
                 PATROCINADORES OFICIAIS
               </h3>
-              <div className="grid grid-cols-2 gap-8 items-center justify-items-center">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12 items-center justify-items-center">
                 <img
                   src="/sanauticalogotransparente.png"
                   alt="Sanáutica"
-                  className="h-16 w-32 object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500"
+                  className="w-full h-auto max-w-[120px] md:max-w-[150px] object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500 drop-shadow-md"
                 />
                 <img
                   src="/marinaatlantidatransparente.png"
                   alt="Marina Atlântida"
-                  className="h-16 w-32 object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500"
+                  className="w-full h-auto max-w-[120px] md:max-w-[150px] object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500 drop-shadow-md"
                 />
                 <img
                   src="/bluefoxlogotrasnparente.png"
                   alt="Marina Blue Fox"
-                  className="h-16 w-32 object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500"
+                  className="w-full h-auto max-w-[120px] md:max-w-[150px] object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500 drop-shadow-md"
                 />
                 <img
                   src="/logonavitectransparente.png"
                   alt="Navitec"
-                  className="h-16 w-32 object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500"
+                  className="w-full h-auto max-w-[70px] md:max-w-[90px] object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500 drop-shadow-md"
                 />
               </div>
             </div>
@@ -141,7 +141,7 @@ const Agenda = () => {
                 <img
                   src="/logomanoscomunica%C3%A7%C3%A3ovisualtransparente.png"
                   alt="Manos Comunicação Visual"
-                  className="h-16 w-auto object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500"
+                  className="w-full h-auto max-w-[180px] md:max-w-[220px] object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500 drop-shadow-md"
                 />
               </div>
             </div>
