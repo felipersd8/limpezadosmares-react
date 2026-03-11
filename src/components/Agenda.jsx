@@ -111,22 +111,22 @@ const Agenda = () => {
                 <img
                   src="/sanauticalogotransparente.png"
                   alt="Sanáutica"
-                  className="w-full h-auto max-w-[120px] md:max-w-[150px] object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500 drop-shadow-md"
+                  className="w-full h-auto max-w-[120px] md:max-w-[150px] object-contain hover:scale-105 transition-all duration-500 drop-shadow-md"
                 />
                 <img
                   src="/marinaatlantidatransparente.png"
                   alt="Marina Atlântida"
-                  className="w-full h-auto max-w-[120px] md:max-w-[150px] object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500 drop-shadow-md"
+                  className="w-full h-auto max-w-[120px] md:max-w-[150px] object-contain hover:scale-105 transition-all duration-500 drop-shadow-md"
                 />
                 <img
                   src="/bluefoxlogotrasnparente.png"
                   alt="Marina Blue Fox"
-                  className="w-full h-auto max-w-[120px] md:max-w-[150px] object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500 drop-shadow-md"
+                  className="w-full h-auto max-w-[120px] md:max-w-[150px] object-contain hover:scale-105 transition-all duration-500 drop-shadow-md"
                 />
                 <img
                   src="/logonavitectransparente.png"
                   alt="Navitec"
-                  className="w-full h-auto max-w-[70px] md:max-w-[90px] object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500 drop-shadow-md"
+                  className="w-full h-auto max-w-[70px] md:max-w-[90px] object-contain hover:scale-105 transition-all duration-500 drop-shadow-md"
                 />
               </div>
             </div>
@@ -141,7 +141,7 @@ const Agenda = () => {
                 <img
                   src="/logomanoscomunica%C3%A7%C3%A3ovisualtransparente.png"
                   alt="Manos Comunicação Visual"
-                  className="w-full h-auto max-w-[180px] md:max-w-[220px] object-contain grayscale hover:grayscale-0 opacity-70 hover:opacity-100 transition-all duration-500 drop-shadow-md"
+                  className="w-full h-auto max-w-[280px] md:max-w-[360px] object-contain hover:scale-105 transition-all duration-500 drop-shadow-md"
                 />
               </div>
             </div>
