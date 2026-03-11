@@ -139,7 +139,7 @@ const Agenda = () => {
               </h3>
               <div className="flex justify-center">
                 <img
-                  src="/logomanoscomunica%C3%A7%C3%A3ovisualtransparente.png"
+                  src="/logomanoscomunica%C3%A7%C3%A3ovisual.png"
                   alt="Manos Comunicação Visual"
                   className="w-full h-auto object-contain hover:scale-105 transition-all duration-500 drop-shadow-md"
                 />
