@@ -86,17 +86,18 @@ const Agenda = () => {
             <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
           {/* Sponsorship & Partners with specialized tiers */}
           <div className="space-y-8 w-full">
-            {/* Main Sponsor - Diamond Tier */}
-            <div className="glass-2026 p-6 border-cyan-500/30 bg-cyan-950/20">
-              <h3 className="text-xs font-bold tracking-[0.2em] text-cyan-400 mb-6 flex items-center gap-3">
+            {/* Main Sponsor - Mantenedor Tier */}
+            <div className="glass-2026 p-8 border-cyan-400/40 bg-cyan-950/30 ring-1 ring-cyan-400/20">
+              <h3 className="text-xs font-bold tracking-[0.2em] text-cyan-300 mb-2 flex items-center gap-3">
                 <span className="w-8 h-[1px] bg-cyan-400/50"></span>
-                PATROCINADOR DIAMANTE
+                PATROCINADOR MANTENEDOR
               </h3>
+              <p className="text-[10px] text-cyan-400/60 mb-6 ml-11 tracking-widest">APOIO PRINCIPAL</p>
               <div className="flex justify-center">
                 <img
                   src="/logoforttransparente.png"
                   alt="Fort Atacadista"
-                  className="w-full h-auto max-w-[180px] md:max-w-[220px] object-contain hover:scale-110 transition-transform duration-500 drop-shadow-lg"
+                  className="w-full h-auto max-w-[220px] md:max-w-[260px] object-contain hover:scale-110 transition-transform duration-500 drop-shadow-lg"
                 />
               </div>
             </div>
@@ -132,8 +133,8 @@ const Agenda = () => {
             </div>
 
             {/* Apoiadores Oficiais */}
-            <div className="glass-2026 p-8 border-white/10">
-              <h3 className="text-xs font-bold tracking-[0.2em] text-white/60 mb-8 flex items-center gap-3">
+            <div className="glass-2026 p-6 border-white/10">
+              <h3 className="text-xs font-bold tracking-[0.2em] text-white/60 mb-6 flex items-center gap-3">
                 <span className="w-8 h-[1px] bg-white/20"></span>
                 APOIADORES OFICIAIS
               </h3>
@@ -141,7 +142,7 @@ const Agenda = () => {
                 <img
                   src="/logomanoscomunica%C3%A7%C3%A3ovisual.png"
                   alt="Manos Comunicação Visual"
-                  className="w-full h-auto object-contain hover:scale-105 transition-all duration-500 drop-shadow-md"
+                  className="w-full h-auto max-w-[180px] object-contain hover:scale-105 transition-all duration-500 drop-shadow-md"
                 />
               </div>
             </div>
