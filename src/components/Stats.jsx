@@ -1,5 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
-import { motion, useInView } from 'framer-motion';
+import { useTranslation } from 'react-i18next';
 
 const AnimatedCounter = ({ from, to, duration = 2, suffix = "" }) => {
   const ref = useRef(null);
@@ -26,11 +25,12 @@ const AnimatedCounter = ({ from, to, duration = 2, suffix = "" }) => {
 };
 
 const Stats = () => {
+  const { t } = useTranslation();
   const stats = [
-    { label: "Resíduos Removidos", value: 193, suffix: "T+", sub: "Toneladas de impacto" },
-    { label: "Etapas Realizadas", value: 51, suffix: "+", sub: "Ações coordenadas" },
-    { label: "Anos de História", value: 12, suffix: "", sub: "Desde 2014" },
-    { label: "Voluntários", value: 5000, suffix: "+", sub: "Engajamento total" },
+    { label: t("residuos_removidos"), value: 193, suffix: "T+", sub: t("residuos_removidos_sub") },
+    { label: t("etapas_realizadas"), value: 51, suffix: "+", sub: t("etapas_realizadas_sub") },
+    { label: t("anos_historia"), value: 12, suffix: "", sub: t("anos_historia_sub") },
+    { label: t("voluntarios"), value: 5000, suffix: "+", sub: t("voluntarios_sub") },
   ];
 
   return (
@@ -42,10 +42,10 @@ const Stats = () => {
           
           <div className="relative z-10 text-center mb-20">
             <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] mb-4 block">
-              Resultados Mensuráveis
+              {t('resultados_mensuraveis')}
             </span>
             <h2 className="text-3xl md:text-7xl font-black">
-              NOSSO <span className="text-reveal">IMPACTO</span>
+              {t('nosso_impacto')} <span className="text-reveal">{t('nosso_impacto_reveal')}</span>
             </h2>
           </div>
 

@@ -1,9 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X, Waves } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Header = () => {
+  const { t } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const location = useLocation();
@@ -17,12 +15,12 @@ const Header = () => {
   }, []);
 
   const navLinks = [
-    { name: 'O Projeto', path: '/#features' },
-    { name: 'Etapas', path: '/#etapas' },
-    { name: 'Impacto', path: '/#stats' },
-    { name: 'Notícias', path: '/noticias' },
-    { name: 'Agenda', path: '/#agenda' },
-    { name: 'Loja', path: '/loja' },
+    { name: t('projeto'), path: '/#features' },
+    { name: t('etapas'), path: '/#etapas' },
+    { name: t('impacto'), path: '/#stats' },
+    { name: t('noticias'), path: '/noticias' },
+    { name: t('agenda'), path: '/#agenda' },
+    { name: t('loja'), path: '/loja' },
   ];
 
   return (
@@ -64,7 +62,7 @@ const Header = () => {
             </div>
             
             <Link to="/inscricao" className="btn-2026 py-2 px-6 text-xs bg-white text-bg hover:bg-primary shadow-glow">
-              INSCREVA-SE
+              {t('inscreva_se')}
             </Link>
           </div>
 
@@ -104,7 +102,7 @@ const Header = () => {
                   </Link>
                 ))}
               </div>
-              <button className="btn-2026 w-full mt-4 text-xs py-3 relative z-10">QUERO AJUDAR</button>
+              <button className="btn-2026 w-full mt-4 text-xs py-3 relative z-10">{t('quero_ajudar')}</button>
             </motion.div>
           )}
         </AnimatePresence>

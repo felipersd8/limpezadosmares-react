@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { MousePointer2, ChevronDown } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
+  const { t } = useTranslation();
   const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 800], [0, 300]);
   const opacity = useTransform(scrollY, [0, 400], [1, 0]);
@@ -10,7 +12,7 @@ const Hero = () => {
 
   return (
     <section id="hero" className="relative h-screen min-h-[800px] flex items-center justify-center overflow-hidden pt-0 pb-0 bg-bg">
-      {/* Parallax Background */}
+      {/* ... (video and overlays remain the same) */}
       <motion.div 
         style={{ y: y1, scale, opacity }}
         className="absolute inset-0 z-0 origin-bottom h-full w-full"
@@ -43,12 +45,12 @@ const Hero = () => {
             transition={{ delay: 0.4, duration: 1.2, ease: "easeOut" }}
           >
             <span className="text-primary font-bold tracking-[0.4em] uppercase text-sm mb-8 block drop-shadow-lg">
-              Projeto Limpeza dos Mares 
+              {t('projeto_label')}
             </span>
             <h1 className="text-[clamp(1.5rem,7vw,2.5rem)] sm:text-6xl md:text-8xl lg:text-[7rem] font-bold mb-8 leading-[0.9] tracking-tighter text-white drop-shadow-2xl" style={{ fontFamily: 'Syncopate, sans-serif' }}>
-              UM OCEANO <br />
-              <span className="text-reveal inline-block mt-4">DESLUMBRANTE</span> <br />
-              COMEÇA AQUI
+              {t('titulo_principal')} <br />
+              <span className="text-reveal inline-block mt-4">{t('titulo_principal_reveal')}</span> <br />
+              {t('titulo_principal_suffix')}
             </h1>
           </motion.div>
 
@@ -58,7 +60,7 @@ const Hero = () => {
             transition={{ delay: 0.8, duration: 1 }}
             className="text-xl md:text-2xl text-text-muted max-w-3xl mx-auto mb-16 font-light leading-relaxed drop-shadow-md"
           >
-            Desde 2014, transformamos a realidade dos nossos mares. Junte-se à missão que já removeu mais de 193 toneladas de resíduos e inspira o mundo.
+            {t('descricao_hero')}
           </motion.p>
 
           <motion.div 
@@ -68,11 +70,11 @@ const Hero = () => {
             className="flex flex-col md:flex-row items-center justify-center gap-8"
           >
             <button className="btn-2026 shadow-[0_0_40px_rgba(16,185,129,0.3)] hover:shadow-[0_0_60px_rgba(16,185,129,0.5)]">
-              DESCUBRA A MISSÃO
+              {t('botao_missao')}
             </button>
             <span className="text-sm font-bold tracking-widest text-text-muted hover:text-white transition-colors uppercase flex items-center gap-3">
               <MousePointer2 size={16} className="text-primary animate-pulse" />
-              Role para explorar
+              {t('role_para_explorar')}
             </span>
           </motion.div>
         </motion.div>
@@ -84,7 +86,7 @@ const Hero = () => {
         transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
         className="absolute bottom-16 left-1/2 -translate-x-1/2 text-primary opacity-60 hidden md:flex flex-col items-center gap-2 z-20"
       >
-        <span className="text-[10px] tracking-[0.3em] font-bold uppercase text-white/50">Scroll</span>
+        <span className="text-[10px] tracking-[0.3em] font-bold uppercase text-white/50">{t('scroll')}</span>
         <ChevronDown size={32} />
       </motion.div>
 

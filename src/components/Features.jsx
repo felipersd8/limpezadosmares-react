@@ -59,7 +59,10 @@ const IconWrapper = ({ children }) => (
   </svg>
 );
 
+import { useTranslation } from 'react-i18next';
+
 const Features = () => {
+  const { t } = useTranslation();
   const container = {
     hidden: { opacity: 0 },
     show: {
@@ -83,8 +86,8 @@ const Features = () => {
           <AnimatedPath d="M16 3.13a4 4 0 0 1 0 7.75" />
         </IconWrapper>
       ),
-      title: "Voluntários",
-      desc: "Uma rede global de pessoas dedicadas a proteger o ecossistema marinho."
+      title: t('pilar_voluntarios_title'),
+      desc: t('pilar_voluntarios_desc')
     },
     {
       icon: (
@@ -95,8 +98,8 @@ const Features = () => {
           <AnimatedPath d="M14 11v6" />
         </IconWrapper>
       ),
-      title: "Ações Reais",
-      desc: "Mutirões intensivos de remoção de resíduos em todo o litoral catarinense."
+      title: t('pilar_acoes_title'),
+      desc: t('pilar_acoes_desc')
     },
     {
       icon: (
@@ -105,8 +108,8 @@ const Features = () => {
           <AnimatedPolyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" />
         </IconWrapper>
       ),
-      title: "Reconhecimento",
-      desc: "Premiado como um dos projetos ambientais mais eficazes do Brasil."
+      title: t('pilar_reconhecimento_title'),
+      desc: t('pilar_reconhecimento_desc')
     },
     {
       icon: (
@@ -114,8 +117,8 @@ const Features = () => {
           <AnimatedPolygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
         </IconWrapper>
       ),
-      title: "Inovação",
-      desc: "Uso de tecnologias modernas para triagem e destinação correta de resíduos."
+      title: t('pilar_inovacao_title'),
+      desc: t('pilar_inovacao_desc')
     }
   ];
 
@@ -125,15 +128,15 @@ const Features = () => {
         <div className="flex flex-col md:flex-row items-end justify-between mb-20 gap-8">
           <div className="max-w-2xl">
             <span className="text-primary font-bold tracking-[0.3em] uppercase text-[10px] mb-4 block">
-              Nossa Infraestrutura
+              {t('nossa_infraestrutura')}
             </span>
             <h2 className="text-[clamp(1.6rem,7vw,2.25rem)] md:text-6xl font-black leading-none">
-              PILARES DA <br />
-              <span className="text-reveal">TRANSFORMAÇÃO</span>
+              {t('pilares_da')} <br />
+              <span className="text-reveal">{t('transformacao')}</span>
             </h2>
           </div>
           <p className="text-text-muted text-lg max-w-sm font-medium">
-            Atuamos em múltiplas frentes para garantir que o oceano continue sendo fonte de vida.
+            {t('frentes_atuacao')}
           </p>
         </div>
 

@@ -1,8 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Calendar, Anchor } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 
 const Agenda = () => {
+  const { t } = useTranslation();
   return (
     <section id="agenda" className="py-24 relative overflow-hidden">
       <div className="container-mega relative z-10">
@@ -16,46 +15,46 @@ const Agenda = () => {
           >
             <div className="inline-flex items-center gap-2 mb-6 bg-white/20 px-5 py-2 rounded-full border border-white/30 text-white shadow-lg backdrop-blur-sm">
               <Calendar size={18} className="text-cyan-300" />
-              <span className="font-black tracking-widest text-xs uppercase">Próxima Etapa</span>
+              <span className="font-black tracking-widest text-xs uppercase">{t('proxima_etapa')}</span>
             </div>
             
             <h2 className="text-4xl md:text-8xl font-black mb-8 text-white leading-tight drop-shadow-[0_10px_10px_rgba(0,0,0,0.3)]" style={{ fontFamily: 'Syncopate, sans-serif' }}>
-              Vem aí: <br/>
+              {t('vem_ai')} <br/>
               <span className="text-cyan-400 drop-shadow-[0_0_30px_rgba(34,211,238,0.6)] animate-pulse">21/03</span>
             </h2>
             
             <div className="bg-black/20 p-6 rounded-2xl backdrop-blur-md border border-white/10 mb-8 max-w-xl">
               <p className="text-xl text-white mb-4 leading-relaxed font-bold">
-                Próxima Etapa: <span className="text-cyan-300 underline underline-offset-8 decoration-cyan-400/60">Praia do Tinguá</span>.<br/>
+                {t('proxima_etapa')}: <span className="text-cyan-300 underline underline-offset-8 decoration-cyan-400/60">Praia do Tinguá</span>.<br/>
               </p>
               <p className="text-lg text-white/90 mb-4 font-medium leading-relaxed">
-                Governador Celso Ramos/SC. Ação especial em alusão ao Dia Mundial da Água!
+                Governador Celso Ramos/SC. {t('dia_mundial_agua')}
               </p>
               <div className="flex items-center gap-3 text-cyan-400 font-black text-xl bg-cyan-400/10 p-4 rounded-xl border border-cyan-400/20">
                 <span>📅 21 de março</span>
                 <span className="text-white/40">·</span>
-                <span>Das 9h às 12h</span>
+                <span>{t('das_9h_as_12h')}</span>
               </div>
             </div>
 
             {/* Beach Registration */}
             <div className="mb-6">
-              <p className="text-sm text-text-muted mb-3 uppercase tracking-widest font-bold">Inscrições para a Praia — Tartaruga e Estrela do Mar:</p>
+              <p className="text-sm text-text-muted mb-3 uppercase tracking-widest font-bold">{t('inscricoes_praia')}</p>
               <motion.button
                 onClick={() => window.location.href = '/inscricao'}
                 className="btn-2026 shadow-glow inline-flex items-center justify-center gap-3"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                Clique aqui para se inscrever!
+                {t('clique_inscrever')}
                 <Anchor size={18} />
               </motion.button>
             </div>
 
             {/* Boat / Dive Registration */}
             <div className="mb-10 p-5 rounded-2xl border border-white/20 bg-white/10 max-w-xl shadow-lg">
-              <p className="text-sm font-bold uppercase tracking-widest text-white mb-3">Vagas Embarcado / Mergulhador (Golfinho) — saída de Canasvieiras:</p>
-              <p className="text-sm text-white/90 mb-4 leading-relaxed">Vagas limitadas · Inscrições via Acquanauta Floripa:</p>
+              <p className="text-sm font-bold uppercase tracking-widest text-white mb-3">{t('vagas_embarcado')}</p>
+              <p className="text-sm text-white/90 mb-4 leading-relaxed">{t('vagas_limitadas')}</p>
               <div className="flex flex-col sm:flex-row gap-3">
                 <motion.a
                   href="https://wa.me/5548999330062?text=Olá, gostaria de me inscrever para a etapa embarcada/mergulho no Tinguá."
@@ -65,7 +64,7 @@ const Agenda = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  WhatsApp Acquanauta
+                  {t('whatsapp_acquanauta')}
                   <Anchor size={16} />
                 </motion.a>
                 <div className="flex flex-col justify-center text-sm text-white font-medium">
@@ -90,7 +89,7 @@ const Agenda = () => {
             <div className="glass-2026 p-8 border-cyan-400/40 bg-cyan-950/30 ring-1 ring-cyan-400/20">
               <h3 className="text-xs font-bold tracking-[0.2em] text-cyan-300 mb-2 flex items-center gap-3">
                 <span className="w-8 h-[1px] bg-cyan-400/50"></span>
-                PATROCINADOR MANTENEDOR
+                {t('patrocinador_mantenedor')}
               </h3>
               <div className="flex justify-center">
                 <img
@@ -105,7 +104,7 @@ const Agenda = () => {
             <div className="glass-2026 p-6 border-white/10">
               <h3 className="text-xs font-bold tracking-[0.2em] text-white/60 mb-6 flex items-center gap-3">
                 <span className="w-8 h-[1px] bg-white/20"></span>
-                PATROCINADORES OFICIAIS
+                {t('patrocinadores_oficiais')}
               </h3>
               <div className="grid grid-cols-2 gap-6 items-center justify-items-center">
                 <img
@@ -135,7 +134,7 @@ const Agenda = () => {
             <div className="glass-2026 p-6 border-white/10">
               <h3 className="text-xs font-bold tracking-[0.2em] text-white/60 mb-6 flex items-center gap-3">
                 <span className="w-8 h-[1px] bg-white/20"></span>
-                APOIADORES OFICIAIS
+                {t('apoiadores_oficiais')}
               </h3>
               <div className="flex justify-center">
                 <img

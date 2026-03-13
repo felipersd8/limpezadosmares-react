@@ -1,10 +1,7 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { MapPin, Calendar, Anchor } from 'lucide-react';
-import posts from '../data/posts.json';
+import { useTranslation } from 'react-i18next';
 
 const Etapas = ({ data = [] }) => {
+  const { t } = useTranslation();
   // Use posts from JSON as source of truth, but allow override via prop
   const displayData = data.length > 0 ? data : posts.slice(1, 4).map(p => {
     const titleLines = p.title.split('\n');
@@ -22,11 +19,11 @@ const Etapas = ({ data = [] }) => {
       <div className="container-mega">
         <div className="mb-20">
           <span className="text-primary font-bold tracking-[0.4em] uppercase text-[10px] mb-4 block">
-            Nossa Jornada
+            {t('nossa_jornada')}
           </span>
           <h2 className="text-4xl md:text-7xl font-black">
-            ETAPAS JÁ <br />
-            <span className="text-reveal">REALIZADAS</span>
+            {t('etapas_ja')} <br />
+            <span className="text-reveal">{t('realizadas')}</span>
           </h2>
         </div>
 
@@ -71,7 +68,7 @@ const Etapas = ({ data = [] }) => {
                       {etapa.title}
                     </h3>
                     <div className="mt-auto text-[10px] font-black tracking-[0.3em] uppercase text-white/40 group-hover:text-white transition-colors flex items-center gap-2">
-                      Ver detalhes —
+                      {t('ver_detalhes')}
                     </div>
                   </div>
                 </div>
