@@ -1,4 +1,9 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+import { MapPin, Calendar, Anchor } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import posts from '../data/posts.json';
 
 const Etapas = ({ data = [] }) => {
   const { t } = useTranslation();

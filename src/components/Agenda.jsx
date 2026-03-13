@@ -1,3 +1,6 @@
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Calendar, Anchor } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const Agenda = () => {

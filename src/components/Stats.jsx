@@ -1,3 +1,5 @@
+import React, { useEffect, useState, useRef } from 'react';
+import { motion, useInView } from 'framer-motion';
 import { useTranslation } from 'react-i18next';
 
 const AnimatedCounter = ({ from, to, duration = 2, suffix = "" }) => {
